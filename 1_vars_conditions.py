@@ -8,6 +8,7 @@ Comment Line 1
 Comment Line 2
 ...
 """
+
 # but can be actually assignable to variable :D
 print(mlc)
 
@@ -21,6 +22,25 @@ a = int_var > 0 and int_var < 10
 b = int_var > 0 or int_var < 10
 c = not (int_var > 0 or int_var < 10)
 print(a, b, c)
+
+# conditions
+five = 5
+ten = 10
+
+if five > ten:
+    print("x is > y")
+elif five < ten:
+    print("x is < y")
+else:
+    print("x is == y")  # can also be on same line
+
+# Ternary operators (pretty weird design choice tbh)
+print("BIGGER") if five > ten else print("LOWER")
+
+# lol why would I wanted to do nothing in if clause, but if you need you can pass :D
+# pass can be used also for empty body function
+if five > ten:
+    pass
 
 print("-------------TYPES-------------")
 print(type(int_var))
@@ -47,22 +67,3 @@ x, y, z = fruits
 
 # print multiple values
 print(x, y, z, 5, "John")
-
-
-print("-------------STRING FORMATTING/INTERPOLATION-------------")
-
-# simple nice one
-print(f"Int value {int_var} is bigger than float value {float_var}")
-
-# %-formatting
-print(
-    "Hi name is %s with height %d and age %f or simpler %.1f "
-    % ("John Wick Height is", 182, 44.5, 44.50)
-)
-# not a print specific, this is python syntax
-test_str = "Hmm %s" % ("hmmmm")
-print(test_str)
-
-# string format approach
-str_formatted = "Apples to {}".format("Orangs")
-print(f"{str_formatted}")

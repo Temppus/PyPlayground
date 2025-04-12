@@ -1,5 +1,3 @@
-print("-------------SETS-------------")
-
 # set is unordered collection that does not allow duplicate values
 s = {1, 2, 3, 4}
 s = set([1, 2, 3, 4])  # or this

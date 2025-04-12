@@ -1,68 +1,3 @@
-# general data types
-"""
-Text Type:	str
-Boolean Type:	bool
-Numeric Types:	int, float, complex (complex numbers)
-
-Sequence Types:	list, tuple, range
-
-Mapping Type:	dict
-Set Types:	set, frozenset
-
-Binary Types:	bytes, bytearray, memoryview
-
-None Type:	NoneType
-"""
-
-a = "Hello, World!"
-print(a[1])
-
-print("-------------BOOLEANS-------------")
-
-# Falsy values in Python: False, None, 0, 0.0, "" (empty string), [] (empty list), {} (empty dictionary), set(), (), and range(0).
-# Everything else is truthy.
-print(
-    bool(0), bool(False), bool(None), bool(0.0), bool(""), bool([]), bool({}), bool(())
-)
-print(bool("Hello"), bool(15), bool(-1.0))
-
-print("-------------TUPLES-------------")
-
-# tuples ...
-my_tuple_a = (1, 2, 3, 4)
-my_tuple_b = 1, 2, 3, 4  # tuple packing
-print(my_tuple_a)
-print(my_tuple_b)
-
-single_element = (5,)  # Correct
-not_a_tuple = 5  # This is just an int
-
-print(type(single_element))  # <class 'tuple'>
-print(type(not_a_tuple))  # <class 'int'>
-
-t = tuple([1, 2, 3, 4, 5])  # Converts a list to a tuple
-
-print(t[0])
-print(t[2])
-print(t[-1])  # last one
-
-# SLICING -> works also for any collection like data type
-print(t[1:4])  # (2, 3, 4)
-print(t[:3])  # (1, 2, 3)
-print(t[::2])  # (1, 3, 5) (every second element)
-
-# tuple unpacking
-a, b, c, *rest = t
-print(a, b, c, rest)  # rest will be list of rest values in tuple
-
-first_two, *remaining = t[:2], t[2:]  # Using slicing
-print(
-    first_two,  # tuple of 2
-    remaining,
-)
-
-print("-------------LISTS-------------")
-# python uses list heavily instead of arrays afaik
 my_list = [
     "Apple",
     9,
@@ -134,3 +69,15 @@ iterable = filter(
     lambda s: s == "x", s
 )  # returns iterable, more on to that in class stuff I guess
 print(f"Filtered:{list(iterable)}")
+
+# append()	Adds an element at the end of the list
+# clear()	Removes all the elements from the list
+# copy()	Returns a copy of the list
+# count()	Returns the number of elements with the specified value
+# extend()	Add the elements of a list (or any iterable), to the end of the current list
+# index()	Returns the index of the first element with the specified value
+# insert()	Adds an element at the specified position
+# pop()	Removes the element at the specified position
+# remove()	Removes the first item with the specified value
+# reverse()	Reverses the order of the list
+# sort()	Sorts the list
